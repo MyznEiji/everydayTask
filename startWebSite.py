@@ -1,6 +1,6 @@
 import webbrowser
 
-file = open('webSiteLists.txt', 'r')
+file = open('myList/webSiteLists.txt', 'r')
 urls = file.read().split(',\n')
 
 for url in urls:

@@ -3,7 +3,7 @@ import subprocess
 from termcolor import cprint
 
 # 配列化
-file = open('markdownLinks.txt', 'r')
+file = open('myList/markdownLinks.txt', 'r')
 urlsArray = file.read().split(',\n')
 urlsArray[0].split(',')
 
@@ -24,7 +24,7 @@ for url_a in urlsArray:
 
         if input_a == "y":
             # ファイルを作成
-            cprint("\nFile Name : \n", "yellow")
+            cprint("\nFile Name.md : \n", "yellow")
             fileName = str(input())
             linux_command_newFile = "touch " + path + "/" + fileName
             subprocess.run([linux_command_newFile], shell=True)
@@ -34,10 +34,7 @@ for url_a in urlsArray:
             subprocess.run([linux_command_typora], shell=True)
             break
         elif input_a == "n":
-            print("no")
+            cprint("\nnext!\n", "yellow")
             break
         else:
             cprint("\nInvalid Value\n", "red")
-
-
-open("hoge.txt", "w")

@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 from termcolor import cprint
 
 # youtubeSearchWord.txtから参照
-file = open('youtubeSearchWords.txt', 'r')
+file = open('myList/youtubeSearchWords.txt', 'r')
 words = file.read().split(',\n')
 
 
@@ -31,7 +31,7 @@ for word in words:
 
 # ダウンロードサイトを開く
 driver.get("https://www.onlinevideoconverter.com/ja/video-converter")
-cprint("Please press the 'Enteer_Key' when downloading is complete", "yellow")
+cprint("Please press the 'Enteer_Key' when downloading is complete", "red")
 input()
 
 
