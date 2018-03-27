@@ -5,7 +5,6 @@ from termcolor import cprint
 # 配列化
 file = open('myList/markdownLinks.txt', 'r')
 urlsArray = file.read().split(',\n')
-urlsArray[0].split(',')
 
 for url_a in urlsArray:
 

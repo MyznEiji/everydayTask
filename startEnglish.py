@@ -1,5 +1,3 @@
-import webbrowser
-import subprocess
 from termcolor import cprint
 
 from lib import openCommand
@@ -21,6 +19,7 @@ openCommand.openApp("kindle")
 # typora open
 path = "/Users/miyazonoeiji/projects/markDown/englishMd/readingEnglish"
 linux_command_typora = "open -a typora " + path
+
 openCommand.openTypora(path, linux_command_typora)
 
 cprint("Move the new file!!!", "red")
