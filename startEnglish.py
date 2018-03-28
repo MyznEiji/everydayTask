@@ -4,7 +4,7 @@ from lib import openCommand
 
 
 # 配列化
-file = open('myList/englishTask.txt', 'r')
+file = open('/Users/miyazonoeiji/projects/python/everdayTask/myList/englishTask.txt', 'r')
 urlsArray = file.read().split(',\n')
 
 # open Web

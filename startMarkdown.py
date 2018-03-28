@@ -3,7 +3,7 @@ import subprocess
 from termcolor import cprint
 
 # 配列化
-file = open('myList/markdownLinks.txt', 'r')
+file = open('/Users/miyazonoeiji/projects/python/everdayTask/myList/markdownLinks.txt', 'r')
 urlsArray = file.read().split(',\n')
 
 for url_a in urlsArray:

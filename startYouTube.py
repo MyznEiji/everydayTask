@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 from termcolor import cprint
 
 # youtubeSearchWord.txtから参照
-file = open('myList/youtubeSearchWords.txt', 'r')
+file = open('/Users/miyazonoeiji/projects/python/everdayTask/myList/youtubeSearchWords.txt', 'r')
 words = file.read().split(',\n')
 
 

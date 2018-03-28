@@ -10,7 +10,7 @@ Morning Flow
 
 
 # 配列化
-file = open('myList/morningLists.txt', 'r')
+file = open('/Users/miyazonoeiji/projects/python/everdayTask/myList/morningLists.txt', 'r')
 urlsArray = file.read().split(',\n')
 
 # open Web
