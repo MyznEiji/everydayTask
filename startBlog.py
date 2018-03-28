@@ -4,4 +4,4 @@ file = open('/Users/miyazonoeiji/projects/python/everdayTask/myList/blogLinks.tx
 urls = file.read().split(',\n')
 
 # Open Blogs
-openCommand.openWebSite(urls)
+openCommand.openWebSite(urls, "Check Web Site")

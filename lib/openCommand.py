@@ -3,8 +3,33 @@ import subprocess
 from termcolor import cprint
 
 
+border1 = "\n#############################################\n"
+border2 = "\n---------------------------------------------\n"
+
+
+def print_info(func):
+    """
+    decorater
+    """
+
+    def wrapper(lists, str):
+        # print
+        cprint("\n\n" + border1 + str + border1, "yellow")
+
+        # メソッド実行
+        result = func(lists)
+
+        # 入力待ち
+        input(cprint("\nNext : Enter key" + border2, "yellow"))
+
+
+        return  result
+    return wrapper
+
+
 
 # webSite Open
+@print_info
 def openWebSite(urlsArray):
     for url_a in urlsArray:
         if url_a is '':
@@ -18,26 +43,25 @@ def openWebSite(urlsArray):
 
 
 # App Open
+@print_info
 def openApp(app):
     subprocess.run(["open -a " + app], shell=True)
 
 
-# Mail Check
-def mailCheck(app, url):
-
-    openApp(app)
-    webbrowser.open_new(url)
-
 
 # typora open
-def openTypora(path_a,linux_command_typora):
+@print_info
+def openTypora(path_a):
 
     # new file
-    cprint("\nFile Name.md : \n", "yellow")
+    cprint("\nFile Name.md : \n", "blue")
     path = path_a
     fileName = str(input())
     linux_command_newFile = "touch " + path + "/" + fileName
     subprocess.run([linux_command_newFile], shell=True)
 
     # open Typora
+    linux_command_typora = "open -a typora " + path_a
     subprocess.run([linux_command_typora], shell=True)
+
+    return str(path + "/" + fileName)

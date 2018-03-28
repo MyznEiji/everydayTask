@@ -7,19 +7,16 @@ from lib import openCommand
 file = open('/Users/miyazonoeiji/projects/python/everdayTask/myList/englishTask.txt', 'r')
 urlsArray = file.read().split(',\n')
 
+
 # open Web
-cprint("Check Web Site", "yellow")
-openCommand.openWebSite(urlsArray)
-input(cprint("Next : Enter key", "yellow"))
+openCommand.openWebSite(urlsArray,"Check Web Site")
 
 # Kindle ReadingOpne
-cprint("Check Kindle", "yellow")
-openCommand.openApp("kindle")
+openCommand.openApp("kindle", "Check Kindle")
 
 # typora open
 path = "/Users/miyazonoeiji/projects/markDown/englishMd/readingEnglish"
-linux_command_typora = "open -a typora " + path
+new_file_path = openCommand.openTypora(path, "Open Typora")
 
-openCommand.openTypora(path, linux_command_typora)
 
-cprint("Move the new file!!!", "red")
+cprint("Move the" + new_file_path , "red")
