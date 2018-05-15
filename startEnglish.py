@@ -15,7 +15,7 @@ openCommand.openWebSite(urlsArray,"Check Web Site")
 openCommand.openApp("kindle", "Check Kindle")
 
 # typora open
-path = "/Users/miyazonoeiji/projects/markDown/englishMd/readingEnglish"
+path = "/Users/miyazonoeiji/projects/markDown/englishMd/listeningEnglish"
 new_file_path = openCommand.openTypora(path, "Open Typora")
 
 
